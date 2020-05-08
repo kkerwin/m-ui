@@ -1,13 +1,19 @@
 import React from 'react'
 import './App.css'
-import { Icon } from './components'
+import { Icon, ConfigProvider } from './components'
 
 function App() {
     return (
-		<div className="App">
-			<h1>mui</h1>
-			<Icon type='heart-fill' style={{ height:'2em', width:"2em", fill:"blue" }} />
-		</div>
+		<ConfigProvider >
+			<div className="App">
+				<h1 style={{ textAlign:'center' }}>m-ui</h1>
+				<div>
+					<p>icon</p>
+					<Icon type='check' style={{ fontSize:'12px' }}/>
+					<Icon type='heart-fill' style={{  fill:"red" }} />
+				</div>
+			</div>
+		</ConfigProvider>
     )
 }
 
