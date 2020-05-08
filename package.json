@@ -77,7 +77,10 @@
     "commit": "npx git-cz"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      
+    }
   },
   "browserslist": {
     "production": [

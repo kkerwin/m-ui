@@ -1,6 +1,71 @@
-@primar-color: #4569d4;
-
+@hd : 2;
 @mui-prefix : mui;
+
+@primary-color: #4569d4;
+// ---- color ----
+@normal-color: #848484 ;
+@danger-color: #F0250F;
+@link-color: @primary-color ;
+@link-hover-color: mix(@link-color, #000, 80%) ;
+@title-color: #2D2D2D ;
+@text-color: #848484 ;
+@light-color: #F6F6F6 ;
+@dark-color: #DADADA ;
+@border-color: #e8e8e8 ;
+// ---- base ----
+@body-background: #F6F6F6 ;
+@mask-bg: rgba(0, 0, 0, 0.5) ;
+@font-family: PingHei,
+"Lucida Grande",
+"Lucida Sans Unicode",
+STHeiti,
+Helvetica,
+Arial,
+Verdana,
+"sans-serif",
+"PingHei-light",
+SimHei,
+"Droid Sans" ;
+@font-size-base: 14px ;
+@font-size-small: 12px ;
+@font-size-large: 16px ;
+@line-height-base: 1.5 ;
+@border-radius-base: 8px ;
+@border-radius-small: 3px ;
+@border-radius-large: 50px ;
+// ---- Animation ----
+@animation-duration: .25s ;
+@transition-duration: .2s ;
+@transition-duration-fast: .2s ;
+@transition-duration-slow: .4s ;
+@animation-timing-fun: cubic-bezier(0.55, 0.085, 0.68, 0.53) ;
+@ease-in-out: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+@ease-out: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+// ---- Border color ----
+@border-color-base: @dark-color ;
+@border-color-dark: #ABABAB ;
+@border-width-base: 1px ;
+@border-style-base: solid ;
+@border-color-active: @primary-color ;
+// ---- Disabled ----
+@disabled-color: fade(#000, 25%); 
+@disabled-bg: #DADADA ;
+@disabled-primary-bg: fade(@primary-color, 25%); 
+// ---- Shadow ----
+@shadow-color: rgba(0, 0, 0, .15) ;
+@shadow-up: 0 -2px 8px @shadow-color ;
+@shadow-down: 0 2px 8px @shadow-color ;
+@shadow-left: -2px 0 8px @shadow-color ;
+@shadow-right: 2px 0 8px @shadow-color ;
+@shadow-base: @shadow-down ;
+
+@spacing-h-md: 15px;
 
 // icon
 @icon-size : 2em;
+
+
+// button
+@btn-size-defalt : 40px;
+@btn-size-small : 26px;
+@btn-disabled-bg: #f9f9f9;

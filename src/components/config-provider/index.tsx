@@ -11,8 +11,7 @@ interface ConfigProps {
 
 export const ConfigContext = createContext<ConfigProps>({})
 
-const ConfigProvider:React.FC<ConfigProps> = ({ children, icon }) => {
-    
+const ConfigProvider:React.FC<ConfigProps> = ({ children, icon }) => {    
     return <ConfigContext.Provider value={{
         icon
     }}>
