@@ -1,13 +1,13 @@
 import React from 'react'
 import './App.css'
-import { Icon, ConfigProvider, Button } from './components'
+import { Icon, ConfigProvider, Button, InfiniteLoading } from './components'
 
 function App() {
     return (
 		<ConfigProvider >
 			<div className="App">
 				<h1 style={{ textAlign:'center' }}>m-ui</h1>
-				<ul>
+				{/* <ul>
 					<li>
 						<div>
 							<p>icon</p>
@@ -31,7 +31,22 @@ function App() {
 							</Button.Group>
 						</div>
 					</li>
-				</ul>
+				</ul> */}
+
+				<InfiniteLoading >
+					<div>
+						1124
+					</div>
+					<div>
+						1124
+					</div>
+					<div>
+						1124
+					</div>
+					<div>
+						1124
+					</div>
+				</InfiniteLoading>
 			</div>
 		</ConfigProvider>
     )
