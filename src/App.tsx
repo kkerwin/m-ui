@@ -26,8 +26,8 @@ function App() {
 							<Button loading >loading</Button>
 							<Button ghost icon="heart-fill" >ghost</Button>
 							<Button small icon="heart-fill" >small</Button>
-							<Button.Group>
-								
+							<Button.Group fixedBottom extra={<>合计：100元</>}>	
+								<Button style={{ width:'100px' }} type="danger">支付</Button>
 							</Button.Group>
 						</div>
 					</li>

@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import Icon from '../icon'
-// import Group from './button-group'
+import Group, { ButtonGroupProps } from './button-group'
 
 
 type ButtonType = 'primary' | 'danger' | 'dashed' 
@@ -19,7 +19,7 @@ export interface BaseButtonProps  {
     circle ?: boolean
 }
 type ButtonProps = BaseButtonProps & Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>,'type'> & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>,'type'>
-const Button:React.FC<ButtonProps> & { Group:React.FC<any> } = ({ 
+const Button:React.FC<ButtonProps> & { Group:React.FC<ButtonGroupProps> } = ({ 
     href,  
     type,
     children, 
@@ -31,7 +31,8 @@ const Button:React.FC<ButtonProps> & { Group:React.FC<any> } = ({
     circle,
     icon,
     className,
-    onClick 
+    onClick,
+    ...restProps 
 }) => {
    
     const cls = classNames('mui-btn', className, {
@@ -59,6 +60,7 @@ const Button:React.FC<ButtonProps> & { Group:React.FC<any> } = ({
     if(loading){
         _icon =  <Icon type="loading"/> 
     }
+    
     const child:React.ReactNode = (<>
         { _icon }
         <span>
@@ -66,15 +68,13 @@ const Button:React.FC<ButtonProps> & { Group:React.FC<any> } = ({
         </span>
     </>)
     if(href){
-        return (<a href={href} className={cls} onClick={handleClick}> { child } </a>)
+        return (<a href={href} className={cls} onClick={handleClick} { ...restProps }> { child } </a>)
     }
-    return (<button className={cls} onClick={handleClick}>{ child }</button>)
+    return (<button className={cls} onClick={handleClick} { ...restProps }>{ child }</button>)
 }
 
 Button.displayName = 'Button'
 
-Button.Group = () => {
-    return <div>ada</div>
-}
+Button.Group = Group
 
 export default Button
